@@ -11,22 +11,22 @@ export type TaskType = {
 
 const todos = [
   {
-    title: "Помыть попу себе",
+    title: "Сделать тестовое задание",
     isCompleted: false,
     id: "124",
   },
   {
-    title: "Помыть попу Феде",
+    title: "Подготовиться к техническому собеседованию",
     isCompleted: false,
     id: "12443",
   },
   {
-    title: "Помыть попу Лёхе",
+    title: "Новый день - новые знания",
     isCompleted: false,
     id: "124htr",
   },
   {
-    title: "Помыть попу Мише",
+    title: "Создать новый пет-проект",
     isCompleted: false,
     id: "124rt",
   },
