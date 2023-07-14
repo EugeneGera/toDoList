@@ -1,3 +1,7 @@
+## Application Description
+This app is made for task scheduling. Functional: adding, deleting, marking as completed and filtering outstanding tasks. Support for changing the theme to dark/light.
+
+## Stack
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). Stack: Next, React, TypeScript, TailwindCSS. In this project, a form is implemented using the react-hook-form library. For code formatting used Prettier.
 
 ## Getting Started
