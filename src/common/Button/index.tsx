@@ -14,8 +14,9 @@ export const Button = function Button(props: {
     <button
       disabled={props.disabled}
       className={classNames(props.className, {
-        "grid grid-flow-col justify-self-end gap-x-2 rounded-md p-1 hover:bg-gray-200 dark:hover:bg-fuchsia-500 dark:bg-fuchsia-600":
+        "grid grid-flow-col justify-self-end gap-x-2 rounded-md p-1 hover:bg-gray-200 dark:hover:bg-fuchsia-500 dark:bg-fuchsia-600 transition-[opacity,_color]":
           props.text,
+        "opacity-40 pointer-events-none": props.disabled,
       })}
       onClick={props.onClick}
       type={props.type}
@@ -28,7 +29,8 @@ export const Button = function Button(props: {
         width={25}
         height={25}
         className={classNames("rounded-md", {
-          "hover:bg-gray-200 dark:bg-fuchsia-600 dark:hover:bg-fuchsia-500":!props.text,
+          "hover:bg-gray-200 dark:bg-fuchsia-600 dark:hover:bg-fuchsia-500 transition-colors":
+            !props.text,
         })}
       />
     </button>
