@@ -36,6 +36,7 @@ export const TaskList = function TaskList() {
   const [task, setTask] = useState<TaskType[]>(todos);
   const [showFilter, setShowFilter] = useState<boolean>(false);
 
+  // Make task complited. Search by id and change field isCompleted.
   const changeTask = (id: string) => {
     const copy = [...task];
     const current = copy.find((task) => task.id === id);
@@ -43,6 +44,7 @@ export const TaskList = function TaskList() {
     setTask(copy);
   };
 
+  // Delete task. Filter array by id.
   const deleteTask = (id: string) => {
     setTask([...task].filter((task) => task.id != id));
   };
@@ -59,7 +61,12 @@ export const TaskList = function TaskList() {
           deleteTask={() => deleteTask(task.id)}
         />
       ))}
-      <CompletedTasks filterTask={() => setShowFilter(!showFilter)} showFilterTask={showFilter} />
+
+      <CompletedTasks
+        filterTask={() => setShowFilter(!showFilter)}
+        showFilterTask={showFilter}
+      />
+      
       <AddTask setTask={setTask} task={task} />
     </div>
   );

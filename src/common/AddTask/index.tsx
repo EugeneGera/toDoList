@@ -14,6 +14,8 @@ export const AddTask = function AddTask(props: {
   setTask: Dispatch<SetStateAction<TaskType[]>>,
   task: TaskType[];
 }) {
+
+  // React-Hook-Form set default values.
   const { handleSubmit, register, reset } = useForm<FormValue>({
     defaultValues: {
       title: "",
@@ -23,6 +25,7 @@ export const AddTask = function AddTask(props: {
     mode: "onChange",
   });
 
+  // Function of submit. Add to state new object.
   const addNewTask: SubmitHandler<FormValue> = (data) => {
     const setTask = props.setTask
     setTask([...props.task, ...[{title: data.title, id: Date(), isCompleted: false}]])
