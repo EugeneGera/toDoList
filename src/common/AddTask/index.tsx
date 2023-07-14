@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Button } from "../Button";
 import { Dispatch, SetStateAction, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
