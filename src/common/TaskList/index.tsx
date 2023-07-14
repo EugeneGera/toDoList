@@ -63,10 +63,11 @@ export const TaskList = function TaskList() {
       ))}
 
       <CompletedTasks
+        disabled={[...task].filter(task => task.isCompleted === true).length === 0}
         filterTask={() => setShowFilter(!showFilter)}
         showFilterTask={showFilter}
       />
-      
+
       <AddTask setTask={setTask} task={task} />
     </div>
   );
