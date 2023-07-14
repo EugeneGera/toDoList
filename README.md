@@ -1,4 +1,4 @@
-## Application Description
+## App Description
 This app is made for task scheduling. Functional: adding, deleting, marking as completed and filtering outstanding tasks. Support for changing the theme to dark/light.
 
 ## Stack
